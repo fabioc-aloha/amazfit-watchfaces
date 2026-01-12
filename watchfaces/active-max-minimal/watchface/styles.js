@@ -1,6 +1,9 @@
 /**
  * Styles and constants for Active Max Minimal watchface
  * Target: Amazfit Active Max (480x480 round)
+ * 
+ * Brand: CorreaX
+ * Color Palette: Azure Tones (see brand/README.md)
  */
 
 // Screen dimensions for Active Max
@@ -14,15 +17,17 @@ export const SCREEN = {
   aodHeight: 324,
 };
 
-// Color palette
+// Color palette - CorreaX Brand Colors (Azure Tones)
 export const COLORS = {
-  background: 0x000000,    // Black
-  primary: 0xFFFFFF,       // White
-  accent: 0x00D4AA,        // Teal/Cyan accent
-  battery: 0x4CAF50,       // Green
-  steps: 0x2196F3,         // Blue
-  heart: 0xE91E63,         // Pink/Red
-  secondary: 0x888888,     // Gray
+  background: 0x000000,    // Black (watchface background)
+  primary: 0xFFFFFF,       // White (primary text/elements)
+  accent: 0x0078D4,        // Azure Blue (CorreaX primary brand)
+  accentDark: 0x005A9E,    // Azure Dark (hover/emphasis)
+  accentLight: 0x00BCF2,   // Azure Light (highlights)
+  battery: 0x10B981,       // Emerald (success - CorreaX brand)
+  steps: 0x0078D4,         // Azure Blue (matches brand)
+  heart: 0xEF4444,         // Red (CorreaX error/health)
+  secondary: 0x64748B,     // Slate 500 (muted - CorreaX brand)
 };
 
 // Time digit images (main display)

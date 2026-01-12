@@ -9,9 +9,9 @@
       "name": "1.0.0"
     },
     "icon": "icon.png",
-    "vender": "Amazfit Dev",
+    "vender": "CorreaX",
     "cover": ["cover.png"],
-    "description": "A minimal watchface for Amazfit Active Max"
+    "description": "A minimal, elegant watchface by CorreaX for Amazfit Active Max"
   },
   "runtime": {
     "apiVersion": {

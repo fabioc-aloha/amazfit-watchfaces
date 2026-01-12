@@ -2,6 +2,7 @@
  * Active Max Minimal Watchface
  * Main watchface entry point
  * 
+ * Brand: CorreaX
  * Target Device: Amazfit Active Max
  * Resolution: 480x480 (round)
  * AOD Resolution: 324x324

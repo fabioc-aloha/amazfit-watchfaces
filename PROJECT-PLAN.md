@@ -1,15 +1,27 @@
 # Amazfit Watchface Development Project Plan
 
-**Project Name**: Amazfit Watchfaces
-**Created**: January 12, 2026
-**Status**: Planning Phase
-**Target Platform**: ZeppOS (Amazfit smartwatches)
+<p align="center">
+  <img src="brand/logos/logo.svg" alt="CorreaX" width="48">
+</p>
+
+<p align="center">
+  <strong>CorreaX Amazfit Watchfaces</strong><br>
+  <sub>Think. Build. Deploy.</sub>
+</p>
+
+---
+
+**Project Name**: CorreaX Amazfit Watchfaces  
+**Created**: January 12, 2026  
+**Status**: Planning Phase  
+**Target Platform**: ZeppOS (Amazfit smartwatches)  
+**Brand**: [CorreaX](brand/README.md)
 
 ---
 
 ## 🎯 Project Overview
 
-Create custom watchfaces for Amazfit devices running ZeppOS. This project will leverage existing open-source tools, community resources, and official Zepp documentation to develop unique, functional watchface designs.
+Create custom watchfaces for Amazfit devices running ZeppOS. This project leverages existing open-source tools, community resources, and official Zepp documentation to develop unique, functional watchface designs following **CorreaX brand guidelines**.
 
 ---
 

@@ -1,8 +1,17 @@
 # Active Max Minimal Watchface
 
-A minimal, clean watchface designed for **Amazfit Active Max**.
+<p align="center">
+  <img src="../../brand/logos/logo.svg" alt="CorreaX" width="48">
+</p>
 
-## Target Device
+<p align="center">
+  <strong>A minimal, elegant watchface by CorreaX</strong><br>
+  <sub>Designed for Amazfit Active Max</sub>
+</p>
+
+---
+
+## Target Devices
 
 | Device | Resolution | AOD | API Level |
 |--------|------------|-----|-----------|
@@ -17,6 +26,18 @@ A minimal, clean watchface designed for **Amazfit Active Max**.
 - 👟 Step counter with arc indicator
 - ❤️ Heart rate display
 - 🌙 AOD (Always-On Display) mode
+
+## Color Palette
+
+This watchface uses the **CorreaX Azure brand colors**:
+
+| Element | Color | Hex |
+|---------|-------|-----|
+| Primary | Azure Blue | `#0078d4` |
+| Battery | Emerald | `#10b981` |
+| Steps | Azure Blue | `#0078d4` |
+| Heart | Red | `#ef4444` |
+| Muted | Slate 500 | `#64748b` |
 
 ## Development
 
@@ -47,44 +68,51 @@ zeus build
 
 ## Project Structure
 
-```
+```text
 active-max-minimal/
 ├── app.js              # App entry point
 ├── app.json            # App configuration
 ├── package.json        # Dependencies
 ├── watchface/
 │   ├── index.js        # Main watchface logic
-│   └── styles.js       # Constants and styles
+│   └── styles.js       # Constants and styles (CorreaX colors)
 └── assets/
     └── 480x480/        # Assets for Active Max
-        ├── time/       # Time digit images
-        ├── digits/     # Small digit images
-        ├── aod/        # AOD digit images
-        ├── week/       # Weekday images
-        └── icons/      # Icon images
+        ├── time_*.png  # Time digit images
+        ├── aod_*.png   # AOD digit images
+        ├── *.png       # Weekday and icon images
+        └── ...
 ```
 
-## Assets Required
+## Assets
 
-You need to create the following image assets:
+The watchface uses the following image assets:
 
-### Time Digits (time/)
-- `0.png` to `9.png` - Large time digits (~80x100px)
-- `colon.png` - Colon separator
-- `colon_aod.png` - AOD colon (dimmer)
+### Time Digits
 
-### Small Digits (digits/)
-- `0.png` to `9.png` - Small digits (~20x30px)
+- `time_0.png` to `time_9.png` — Large time digits
+- `colon.png` — Colon separator
 
-### AOD Digits (aod/)
-- `0.png` to `9.png` - AOD digits (dimmer colors)
+### AOD Digits
 
-### Week Days (week/)
+- `aod_0.png` to `aod_9.png` — Dimmer digits for always-on display
+
+### Weekdays
+
 - `sun.png`, `mon.png`, `tue.png`, `wed.png`, `thu.png`, `fri.png`, `sat.png`
 
-### Icons (icons/)
-- `heart.png` - Heart rate icon (~30x30px)
+### Icons
+
+- `battery_icon.png`, `heart_icon.png`, `steps_icon.png`
+
+---
 
 ## License
 
 MIT
+
+---
+
+<p align="center">
+  <sub>© 2026 CorreaX · Think. Build. Deploy.</sub>
+</p>
