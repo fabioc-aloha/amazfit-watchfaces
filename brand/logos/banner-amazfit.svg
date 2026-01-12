@@ -174,8 +174,7 @@
   </g>
   
   <!-- Main title -->
-  <text x="430" y="135" font-family="SF Pro Display, Segoe UI, system-ui, sans-serif" font-size="64" font-weight="600" fill="url(#titleGrad)" letter-spacing="-1">Amazfit</text>
-  <text x="752" y="135" font-family="SF Pro Display, Segoe UI, system-ui, sans-serif" font-size="64" font-weight="300" fill="url(#textGrad)" letter-spacing="-1">Faces</text>
+  <text x="430" y="135" font-family="SF Pro Display, Segoe UI, system-ui, sans-serif" font-size="64" font-weight="600" fill="url(#titleGrad)" letter-spacing="-1">Amazfit Faces</text>
   
   <!-- Subtitle -->
   <text x="430" y="170" font-family="SF Pro Display, Segoe UI, system-ui, sans-serif" font-size="16" fill="#64748b" letter-spacing="0.5">Premium watchfaces for Amazfit Active line</text>
