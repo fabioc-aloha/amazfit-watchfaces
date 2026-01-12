@@ -11,10 +11,10 @@
 
 ---
 
-**Project Name**: CorreaX Amazfit Watchfaces  
-**Created**: January 12, 2026  
-**Status**: Planning Phase  
-**Target Platform**: ZeppOS (Amazfit smartwatches)  
+**Project Name**: CorreaX Amazfit Watchfaces
+**Created**: January 12, 2026
+**Status**: Planning Phase
+**Target Platform**: ZeppOS (Amazfit smartwatches)
 **Brand**: [CorreaX](brand/README.md)
 
 ---

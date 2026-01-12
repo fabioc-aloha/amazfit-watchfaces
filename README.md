@@ -1,10 +1,5 @@
 <p align="center">
-  <img src="brand/logos/banner.svg" alt="CorreaX" width="500">
-</p>
-
-<p align="center">
-  <strong>Custom Watchfaces for Amazfit Active Line</strong><br>
-  <sub>ZeppOS 4.2+ / 5.0 | Amazfit Active Max, Active 2</sub>
+  <img src="brand/logos/banner-amazfit.svg" alt="CorreaX Amazfit Watchfaces" width="800">
 </p>
 
 <p align="center">
