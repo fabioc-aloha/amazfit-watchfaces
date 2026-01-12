@@ -1,0 +1,14 @@
+{
+  "name": "active-max-minimal",
+  "version": "1.0.0",
+  "description": "Minimal watchface for Amazfit Active Max",
+  "main": "app.js",
+  "author": "Amazfit Dev",
+  "license": "MIT",
+  "dependencies": {
+    "@zeppos/device-types": "^3.0.0"
+  },
+  "devDependencies": {
+    "@zeppos/zeus-cli": "^1.8.0"
+  }
+}

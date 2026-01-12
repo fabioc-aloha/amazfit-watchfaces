@@ -1,0 +1,73 @@
+{
+  "configVersion": "v3",
+  "app": {
+    "appId": 0,
+    "appName": "Active Max Minimal",
+    "appType": "watchface",
+    "version": {
+      "code": 1,
+      "name": "1.0.0"
+    },
+    "icon": "icon.png",
+    "vender": "Amazfit Dev",
+    "cover": ["cover.png"],
+    "description": "A minimal watchface for Amazfit Active Max"
+  },
+  "runtime": {
+    "apiVersion": {
+      "compatible": "4.0.0",
+      "target": "4.2.0",
+      "minVersion": "4.0.0"
+    }
+  },
+  "permissions": [],
+  "targets": {
+    "active-max": {
+      "module": {
+        "watchface": {
+          "path": "watchface/index",
+          "main": 1,
+          "editable": 1,
+          "lockscreen": 1,
+          "photoscreen": 0
+        }
+      },
+      "platforms": [
+        {
+          "name": "amazfit-active-max",
+          "deviceSource": 10813697
+        },
+        {
+          "name": "amazfit-active-max-2",
+          "deviceSource": 10813699
+        }
+      ],
+      "designWidth": 480
+    },
+    "active-2-round": {
+      "module": {
+        "watchface": {
+          "path": "watchface/index",
+          "main": 1,
+          "editable": 1,
+          "lockscreen": 1,
+          "photoscreen": 0
+        }
+      },
+      "platforms": [
+        {
+          "name": "amazfit-active-2-round",
+          "deviceSource": 8913152
+        }
+      ],
+      "designWidth": 466
+    }
+  },
+  "i18n": {
+    "en-US": {
+      "appName": "Active Max Minimal"
+    }
+  },
+  "defaultLanguage": "en-US",
+  "debug": true
+}
