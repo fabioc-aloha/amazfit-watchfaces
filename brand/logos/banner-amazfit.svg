@@ -1,181 +1,222 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300">
   <defs>
-    <!-- Background gradient -->
+    <!-- Background gradient - deeper, richer -->
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#020617"/>
-      <stop offset="50%" stop-color="#0f172a"/>
-      <stop offset="100%" stop-color="#1e293b"/>
+      <stop offset="0%" stop-color="#0a0f1a"/>
+      <stop offset="50%" stop-color="#0d1525"/>
+      <stop offset="100%" stop-color="#111827"/>
     </linearGradient>
     
-    <!-- Logo gradient with glow -->
-    <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#00bcf2"/>
-      <stop offset="50%" stop-color="#0078d4"/>
-      <stop offset="100%" stop-color="#005a9e"/>
+    <!-- Watch case gradient - metallic silver -->
+    <linearGradient id="caseGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4b5563"/>
+      <stop offset="30%" stop-color="#6b7280"/>
+      <stop offset="50%" stop-color="#9ca3af"/>
+      <stop offset="70%" stop-color="#6b7280"/>
+      <stop offset="100%" stop-color="#374151"/>
     </linearGradient>
     
     <!-- Watch face gradient -->
-    <linearGradient id="watchGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1e293b"/>
-      <stop offset="100%" stop-color="#0f172a"/>
+    <radialGradient id="faceGrad" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#1f2937"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </radialGradient>
+    
+    <!-- Azure accent gradient -->
+    <linearGradient id="azureGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0ea5e9"/>
+      <stop offset="50%" stop-color="#0078d4"/>
+      <stop offset="100%" stop-color="#0ea5e9"/>
+    </linearGradient>
+    
+    <!-- Emerald gradient for battery -->
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="100%" stop-color="#10b981"/>
     </linearGradient>
     
     <!-- Text gradient -->
     <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00bcf2"/>
+      <stop offset="0%" stop-color="#60a5fa"/>
       <stop offset="50%" stop-color="#0078d4"/>
-      <stop offset="100%" stop-color="#00bcf2"/>
+      <stop offset="100%" stop-color="#60a5fa"/>
     </linearGradient>
     
-    <!-- Glow filter -->
-    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+    <!-- Premium title gradient -->
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    
+    <!-- Soft glow filter -->
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
       <feMerge>
-        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
     
-    <!-- Strong glow for watch -->
-    <filter id="watchGlow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="6" result="blur1"/>
-      <feMerge>
-        <feMergeNode in="blur1"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
+    <!-- Watch shadow -->
+    <filter id="watchShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="4" stdDeviation="12" flood-color="#0078d4" flood-opacity="0.3"/>
     </filter>
     
-    <!-- Radial glow behind watch -->
-    <radialGradient id="watchBackGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#0078d4" stop-opacity="0.4"/>
-      <stop offset="50%" stop-color="#0078d4" stop-opacity="0.1"/>
+    <!-- Subtle ambient glow -->
+    <radialGradient id="ambientGlow" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#0078d4" stop-opacity="0.15"/>
       <stop offset="100%" stop-color="#0078d4" stop-opacity="0"/>
     </radialGradient>
     
-    <!-- Grid pattern -->
-    <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
-      <path d="M 50 0 L 0 0 0 50" fill="none" stroke="#1e3a5f" stroke-width="0.5" opacity="0.4"/>
-    </pattern>
-    
-    <!-- Dot pattern -->
-    <pattern id="dots" width="30" height="30" patternUnits="userSpaceOnUse">
-      <circle cx="15" cy="15" r="1" fill="#0078d4" opacity="0.2"/>
-    </pattern>
-    
-    <!-- Gradient for accent line -->
+    <!-- Bottom accent gradient -->
     <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#005a9e"/>
-      <stop offset="25%" stop-color="#0078d4"/>
-      <stop offset="50%" stop-color="#00bcf2"/>
-      <stop offset="75%" stop-color="#0078d4"/>
-      <stop offset="100%" stop-color="#005a9e"/>
-    </linearGradient>
-    
-    <!-- Emerald accent for battery -->
-    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#10b981"/>
-      <stop offset="100%" stop-color="#059669"/>
+      <stop offset="0%" stop-color="transparent"/>
+      <stop offset="20%" stop-color="#0078d4"/>
+      <stop offset="50%" stop-color="#0ea5e9"/>
+      <stop offset="80%" stop-color="#0078d4"/>
+      <stop offset="100%" stop-color="transparent"/>
     </linearGradient>
   </defs>
   
   <!-- Background -->
   <rect width="1200" height="300" fill="url(#bgGrad)"/>
   
-  <!-- Grid overlay -->
-  <rect width="1200" height="300" fill="url(#grid)"/>
+  <!-- Subtle grid lines -->
+  <g opacity="0.08">
+    <line x1="0" y1="75" x2="1200" y2="75" stroke="#0078d4" stroke-width="0.5"/>
+    <line x1="0" y1="150" x2="1200" y2="150" stroke="#0078d4" stroke-width="0.5"/>
+    <line x1="0" y1="225" x2="1200" y2="225" stroke="#0078d4" stroke-width="0.5"/>
+    <line x1="300" y1="0" x2="300" y2="300" stroke="#0078d4" stroke-width="0.5"/>
+    <line x1="600" y1="0" x2="600" y2="300" stroke="#0078d4" stroke-width="0.5"/>
+    <line x1="900" y1="0" x2="900" y2="300" stroke="#0078d4" stroke-width="0.5"/>
+  </g>
   
-  <!-- Dot pattern overlay -->
-  <rect width="1200" height="300" fill="url(#dots)" opacity="0.5"/>
+  <!-- Ambient glow behind watch -->
+  <ellipse cx="170" cy="150" rx="180" ry="160" fill="url(#ambientGlow)"/>
   
-  <!-- Large decorative orbs -->
-  <circle cx="180" cy="150" r="200" fill="url(#watchBackGlow)"/>
-  <circle cx="1050" cy="80" r="150" fill="#0078d4" opacity="0.05"/>
-  <circle cx="1150" cy="280" r="180" fill="#00bcf2" opacity="0.03"/>
-  
-  <!-- Floating particles -->
-  <circle cx="100" cy="50" r="2" fill="#00bcf2" opacity="0.6"/>
-  <circle cx="350" cy="30" r="1.5" fill="#0078d4" opacity="0.5"/>
-  <circle cx="500" cy="70" r="2" fill="#00bcf2" opacity="0.4"/>
-  <circle cx="750" cy="25" r="1" fill="#0078d4" opacity="0.6"/>
-  <circle cx="900" cy="60" r="2.5" fill="#00bcf2" opacity="0.3"/>
-  <circle cx="1100" cy="40" r="1.5" fill="#0078d4" opacity="0.5"/>
-  <circle cx="600" cy="260" r="1.5" fill="#0078d4" opacity="0.5"/>
-  <circle cx="850" cy="275" r="2" fill="#00bcf2" opacity="0.3"/>
-  
-  <!-- Connecting lines -->
-  <line x1="100" y1="50" x2="350" y2="30" stroke="#0078d4" stroke-width="0.5" opacity="0.2"/>
-  <line x1="350" y1="30" x2="500" y2="70" stroke="#0078d4" stroke-width="0.5" opacity="0.15"/>
-  <line x1="750" y1="25" x2="900" y2="60" stroke="#0078d4" stroke-width="0.5" opacity="0.2"/>
-  
-  <!-- Watch illustration - outer ring -->
-  <g transform="translate(180, 150)" filter="url(#watchGlow)">
-    <!-- Watch case -->
-    <circle cx="0" cy="0" r="95" fill="none" stroke="#334155" stroke-width="12"/>
-    <circle cx="0" cy="0" r="88" fill="url(#watchGrad)"/>
+  <!-- === WATCH ILLUSTRATION === -->
+  <g transform="translate(170, 150)" filter="url(#watchShadow)">
     
-    <!-- Watch bezel ring -->
-    <circle cx="0" cy="0" r="82" fill="none" stroke="#0078d4" stroke-width="2" opacity="0.6"/>
+    <!-- Watch case outer ring -->
+    <circle cx="0" cy="0" r="105" fill="url(#caseGrad)"/>
+    <circle cx="0" cy="0" r="100" fill="#1f2937"/>
     
-    <!-- Time display: 10:24 -->
-    <text x="-45" y="8" font-family="Segoe UI, system-ui, sans-serif" font-size="42" font-weight="700" fill="url(#textGrad)">10:24</text>
+    <!-- Watch crown/button -->
+    <rect x="98" y="-8" width="14" height="16" rx="3" fill="url(#caseGrad)"/>
     
-    <!-- Date -->
-    <text x="-22" y="35" font-family="Segoe UI, system-ui, sans-serif" font-size="14" fill="#64748b">SUN 12</text>
+    <!-- Watch face background -->
+    <circle cx="0" cy="0" r="92" fill="url(#faceGrad)"/>
     
-    <!-- Battery arc (green) -->
-    <path d="M -60 -55 A 65 65 0 0 1 -20 -70" fill="none" stroke="url(#emeraldGrad)" stroke-width="4" stroke-linecap="round"/>
-    
-    <!-- Steps arc (blue) -->
-    <path d="M 60 -55 A 65 65 0 0 0 20 -70" fill="none" stroke="#0078d4" stroke-width="4" stroke-linecap="round"/>
-    
-    <!-- Heart rate -->
-    <circle cx="0" cy="58" r="8" fill="none" stroke="#ef4444" stroke-width="2"/>
-    <text x="-8" y="62" font-family="Segoe UI, system-ui, sans-serif" font-size="10" fill="#ef4444">♥</text>
-    
-    <!-- Tick marks around bezel -->
-    <g fill="#475569">
-      <rect x="-1" y="-78" width="2" height="6" rx="1"/>
-      <rect x="-1" y="72" width="2" height="6" rx="1"/>
-      <rect x="-78" y="-1" width="6" height="2" ry="1"/>
-      <rect x="72" y="-1" width="6" height="2" ry="1"/>
+    <!-- Outer minute markers -->
+    <g fill="#374151">
+      <!-- 12 main markers -->
+      <rect x="-1.5" y="-88" width="3" height="10" rx="1.5"/>
+      <rect x="-1.5" y="78" width="3" height="10" rx="1.5"/>
+      <rect x="-88" y="-1.5" width="10" height="3" ry="1.5"/>
+      <rect x="78" y="-1.5" width="10" height="3" ry="1.5"/>
+      <!-- Diagonal markers -->
+      <g transform="rotate(30)"><rect x="-1" y="-86" width="2" height="6" rx="1"/></g>
+      <g transform="rotate(60)"><rect x="-1" y="-86" width="2" height="6" rx="1"/></g>
+      <g transform="rotate(120)"><rect x="-1" y="-86" width="2" height="6" rx="1"/></g>
+      <g transform="rotate(150)"><rect x="-1" y="-86" width="2" height="6" rx="1"/></g>
+      <g transform="rotate(210)"><rect x="-1" y="-86" width="2" height="6" rx="1"/></g>
+      <g transform="rotate(240)"><rect x="-1" y="-86" width="2" height="6" rx="1"/></g>
+      <g transform="rotate(300)"><rect x="-1" y="-86" width="2" height="6" rx="1"/></g>
+      <g transform="rotate(330)"><rect x="-1" y="-86" width="2" height="6" rx="1"/></g>
     </g>
+    
+    <!-- Inner decorative ring -->
+    <circle cx="0" cy="0" r="70" fill="none" stroke="#1e293b" stroke-width="1"/>
+    
+    <!-- TIME DISPLAY - Large, clean, centered -->
+    <text x="0" y="8" font-family="SF Pro Display, Segoe UI, system-ui, sans-serif" font-size="52" font-weight="300" fill="#f8fafc" text-anchor="middle" letter-spacing="-2">10:24</text>
+    
+    <!-- Seconds indicator dot -->
+    <circle cx="38" cy="-8" r="3" fill="#0078d4" filter="url(#softGlow)"/>
+    
+    <!-- Date display -->
+    <g transform="translate(0, 35)">
+      <text x="0" y="0" font-family="SF Pro Display, Segoe UI, system-ui, sans-serif" font-size="11" fill="#64748b" text-anchor="middle" letter-spacing="1">SUNDAY</text>
+      <text x="0" y="14" font-family="SF Pro Display, Segoe UI, system-ui, sans-serif" font-size="13" fill="#94a3b8" text-anchor="middle" font-weight="500">JAN 12</text>
+    </g>
+    
+    <!-- Battery arc (top left) -->
+    <g transform="rotate(-135)">
+      <path d="M 0 -68 A 68 68 0 0 1 48 -48" fill="none" stroke="#1e293b" stroke-width="4" stroke-linecap="round"/>
+      <path d="M 0 -68 A 68 68 0 0 1 40 -54" fill="none" stroke="url(#emeraldGrad)" stroke-width="4" stroke-linecap="round"/>
+    </g>
+    <text x="-52" y="-45" font-family="SF Pro Display, Segoe UI, system-ui, sans-serif" font-size="9" fill="#10b981">87%</text>
+    
+    <!-- Steps arc (top right) -->
+    <g transform="rotate(45)">
+      <path d="M 0 -68 A 68 68 0 0 1 48 -48" fill="none" stroke="#1e293b" stroke-width="4" stroke-linecap="round"/>
+      <path d="M 0 -68 A 68 68 0 0 1 35 -58" fill="none" stroke="url(#azureGrad)" stroke-width="4" stroke-linecap="round"/>
+    </g>
+    <text x="42" y="-45" font-family="SF Pro Display, Segoe UI, system-ui, sans-serif" font-size="9" fill="#0078d4">6.2K</text>
+    
+    <!-- Heart rate at bottom -->
+    <g transform="translate(0, 65)">
+      <path d="M 0 -6 C -3 -9 -7 -9 -7 -5 C -7 -2 0 4 0 4 C 0 4 7 -2 7 -5 C 7 -9 3 -9 0 -6" fill="#ef4444" transform="scale(0.9)"/>
+      <text x="14" y="2" font-family="SF Pro Display, Segoe UI, system-ui, sans-serif" font-size="11" fill="#f87171" font-weight="500">72</text>
+    </g>
+    
+    <!-- Subtle reflection on glass -->
+    <ellipse cx="-25" cy="-35" rx="30" ry="15" fill="white" opacity="0.03" transform="rotate(-30)"/>
   </g>
   
-  <!-- CorreaX small logo -->
-  <g transform="translate(330, 55) scale(2.5)">
-    <path d="M16 2C8.268 2 2 8.268 2 16s6.268 14 14 14c3.866 0 7.389-1.568 9.928-4.1l-3.535-3.536A9.002 9.002 0 0116 25c-4.97 0-9-4.03-9-9s4.03-9 9-9c2.29 0 4.38.857 5.971 2.268l3.464-3.639C22.993 3.352 19.66 2 16 2z" fill="url(#logoGrad)"/>
-    <path d="M20 10l-4 6 4 6h4l-4-6 4-6h-4z" fill="url(#logoGrad)"/>
-    <path d="M24 10l4 6-4 6h4l4-6-4-6h-4z" fill="url(#logoGrad)" opacity="0.6"/>
+  <!-- === TEXT CONTENT === -->
+  
+  <!-- CorreaX small logo mark -->
+  <g transform="translate(360, 70) scale(1.8)" opacity="0.9">
+    <path d="M16 2C8.268 2 2 8.268 2 16s6.268 14 14 14c3.866 0 7.389-1.568 9.928-4.1l-3.535-3.536A9.002 9.002 0 0116 25c-4.97 0-9-4.03-9-9s4.03-9 9-9c2.29 0 4.38.857 5.971 2.268l3.464-3.639C22.993 3.352 19.66 2 16 2z" fill="url(#azureGrad)"/>
+    <path d="M20 10l-4 6 4 6h4l-4-6 4-6h-4z" fill="url(#azureGrad)"/>
+    <path d="M24 10l4 6-4 6h4l4-6-4-6h-4z" fill="url(#azureGrad)" opacity="0.5"/>
   </g>
   
-  <!-- Project title -->
-  <text x="420" y="115" font-family="Segoe UI, system-ui, sans-serif" font-size="56" font-weight="700" fill="#f8fafc">Amazfit</text>
-  <text x="420" y="175" font-family="Segoe UI, system-ui, sans-serif" font-size="56" font-weight="700" fill="url(#textGrad)" filter="url(#glow)">Watchfaces</text>
+  <!-- Main title -->
+  <text x="430" y="135" font-family="SF Pro Display, Segoe UI, system-ui, sans-serif" font-size="64" font-weight="600" fill="url(#titleGrad)" letter-spacing="-1">Amazfit</text>
+  <text x="752" y="135" font-family="SF Pro Display, Segoe UI, system-ui, sans-serif" font-size="64" font-weight="300" fill="url(#textGrad)" letter-spacing="-1">Faces</text>
   
   <!-- Subtitle -->
-  <text x="420" y="215" font-family="Segoe UI, system-ui, sans-serif" font-size="18" fill="#64748b" letter-spacing="1">CUSTOM DESIGNS FOR AMAZFIT ACTIVE LINE</text>
+  <text x="430" y="170" font-family="SF Pro Display, Segoe UI, system-ui, sans-serif" font-size="16" fill="#64748b" letter-spacing="0.5">Premium watchfaces for Amazfit Active line</text>
   
-  <!-- Device tags -->
-  <g transform="translate(420, 240)">
-    <rect x="0" y="0" width="90" height="24" rx="4" fill="#0078d4" opacity="0.2"/>
-    <text x="45" y="16" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#00bcf2" text-anchor="middle">Active Max</text>
+  <!-- Feature pills -->
+  <g transform="translate(430, 195)">
+    <!-- Active Max pill -->
+    <rect x="0" y="0" width="100" height="28" rx="14" fill="#0078d4" fill-opacity="0.15" stroke="#0078d4" stroke-opacity="0.3" stroke-width="1"/>
+    <text x="50" y="18" font-family="SF Pro Display, Segoe UI, system-ui, sans-serif" font-size="11" fill="#60a5fa" text-anchor="middle" font-weight="500">Active Max</text>
     
-    <rect x="100" y="0" width="70" height="24" rx="4" fill="#0078d4" opacity="0.2"/>
-    <text x="135" y="16" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#00bcf2" text-anchor="middle">Active 2</text>
+    <!-- Active 2 pill -->
+    <rect x="110" y="0" width="80" height="28" rx="14" fill="#0078d4" fill-opacity="0.15" stroke="#0078d4" stroke-opacity="0.3" stroke-width="1"/>
+    <text x="150" y="18" font-family="SF Pro Display, Segoe UI, system-ui, sans-serif" font-size="11" fill="#60a5fa" text-anchor="middle" font-weight="500">Active 2</text>
     
-    <rect x="180" y="0" width="70" height="24" rx="4" fill="#0078d4" opacity="0.2"/>
-    <text x="215" y="16" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#00bcf2" text-anchor="middle">ZeppOS</text>
+    <!-- ZeppOS pill -->
+    <rect x="200" y="0" width="75" height="28" rx="14" fill="#10b981" fill-opacity="0.15" stroke="#10b981" stroke-opacity="0.3" stroke-width="1"/>
+    <text x="237" y="18" font-family="SF Pro Display, Segoe UI, system-ui, sans-serif" font-size="11" fill="#34d399" text-anchor="middle" font-weight="500">ZeppOS</text>
+    
+    <!-- Open Source pill -->
+    <rect x="285" y="0" width="95" height="28" rx="14" fill="#8b5cf6" fill-opacity="0.15" stroke="#8b5cf6" stroke-opacity="0.3" stroke-width="1"/>
+    <text x="332" y="18" font-family="SF Pro Display, Segoe UI, system-ui, sans-serif" font-size="11" fill="#a78bfa" text-anchor="middle" font-weight="500">Open Source</text>
   </g>
   
-  <!-- Tech circuit decorations on right -->
-  <g opacity="0.3">
-    <path d="M950 100 h100 v50 h50" stroke="#0078d4" stroke-width="1.5" fill="none"/>
-    <circle cx="950" cy="100" r="3" fill="#0078d4"/>
-    <circle cx="1100" cy="150" r="4" fill="#00bcf2"/>
-    <path d="M980 180 h80 v-30 h40" stroke="#00bcf2" stroke-width="1" fill="none"/>
-    <circle cx="980" cy="180" r="2" fill="#00bcf2"/>
+  <!-- Right side decorative elements -->
+  <g opacity="0.15">
+    <circle cx="1050" cy="60" r="80" fill="none" stroke="#0078d4" stroke-width="0.5"/>
+    <circle cx="1050" cy="60" r="60" fill="none" stroke="#0078d4" stroke-width="0.5"/>
+    <circle cx="1050" cy="60" r="40" fill="none" stroke="#0078d4" stroke-width="0.5"/>
+    <circle cx="1100" cy="220" r="50" fill="none" stroke="#10b981" stroke-width="0.5"/>
+    <circle cx="1100" cy="220" r="30" fill="none" stroke="#10b981" stroke-width="0.5"/>
   </g>
   
-  <!-- Bottom accent bar with glow -->
-  <rect x="0" y="290" width="1200" height="10" fill="url(#accentGrad)" filter="url(#glow)"/>
+  <!-- Floating dots -->
+  <circle cx="950" cy="80" r="2" fill="#0078d4" opacity="0.5"/>
+  <circle cx="1000" cy="150" r="1.5" fill="#10b981" opacity="0.4"/>
+  <circle cx="1120" cy="100" r="2" fill="#60a5fa" opacity="0.3"/>
+  <circle cx="980" cy="240" r="1.5" fill="#0078d4" opacity="0.4"/>
+  
+  <!-- Bottom accent line -->
+  <rect x="0" y="294" width="1200" height="6" fill="url(#accentGrad)"/>
+  
+  <!-- CorreaX attribution -->
+  <text x="1170" y="280" font-family="SF Pro Display, Segoe UI, system-ui, sans-serif" font-size="10" fill="#475569" text-anchor="end" letter-spacing="0.5">by CorreaX</text>
 </svg>
