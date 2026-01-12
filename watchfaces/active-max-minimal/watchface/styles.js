@@ -32,55 +32,55 @@ export const COLORS = {
 
 // Time digit images (main display)
 export const TIME_DIGITS = [
-  'time/0.png',
-  'time/1.png',
-  'time/2.png',
-  'time/3.png',
-  'time/4.png',
-  'time/5.png',
-  'time/6.png',
-  'time/7.png',
-  'time/8.png',
-  'time/9.png',
+  'time_0.png',
+  'time_1.png',
+  'time_2.png',
+  'time_3.png',
+  'time_4.png',
+  'time_5.png',
+  'time_6.png',
+  'time_7.png',
+  'time_8.png',
+  'time_9.png',
 ];
 
-// Small digit images (seconds, date, metrics)
+// Small digit images (seconds, date, metrics) - reusing time digits
 export const SMALL_DIGITS = [
-  'digits/0.png',
-  'digits/1.png',
-  'digits/2.png',
-  'digits/3.png',
-  'digits/4.png',
-  'digits/5.png',
-  'digits/6.png',
-  'digits/7.png',
-  'digits/8.png',
-  'digits/9.png',
+  'time_0.png',
+  'time_1.png',
+  'time_2.png',
+  'time_3.png',
+  'time_4.png',
+  'time_5.png',
+  'time_6.png',
+  'time_7.png',
+  'time_8.png',
+  'time_9.png',
 ];
 
 // AOD digit images (dimmer for battery saving)
 export const AOD_DIGITS = [
-  'aod/0.png',
-  'aod/1.png',
-  'aod/2.png',
-  'aod/3.png',
-  'aod/4.png',
-  'aod/5.png',
-  'aod/6.png',
-  'aod/7.png',
-  'aod/8.png',
-  'aod/9.png',
+  'aod_0.png',
+  'aod_1.png',
+  'aod_2.png',
+  'aod_3.png',
+  'aod_4.png',
+  'aod_5.png',
+  'aod_6.png',
+  'aod_7.png',
+  'aod_8.png',
+  'aod_9.png',
 ];
 
 // Weekday images
 export const WEEKDAY_IMAGES = [
-  'week/sun.png',
-  'week/mon.png',
-  'week/tue.png',
-  'week/wed.png',
-  'week/thu.png',
-  'week/fri.png',
-  'week/sat.png',
+  'sun.png',
+  'mon.png',
+  'tue.png',
+  'wed.png',
+  'thu.png',
+  'fri.png',
+  'sat.png',
 ];
 
 // Combined export

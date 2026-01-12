@@ -65,7 +65,7 @@ WatchFace({
     hmUI.createWidget(hmUI.widget.IMG, {
       x: STYLES.SCREEN.centerX - 10,
       y: STYLES.SCREEN.centerY - 50,
-      src: 'time/colon.png',
+      src: 'colon.png',
       show_level: hmUI.show_level.ONLY_NORMAL,
     });
 
@@ -182,7 +182,7 @@ WatchFace({
     hmUI.createWidget(hmUI.widget.IMG, {
       x: STYLES.SCREEN.centerX - 15,
       y: STYLES.SCREEN.height - 100,
-      src: 'icons/heart.png',
+      src: 'heart_icon.png',
       show_level: hmUI.show_level.ONLY_NORMAL,
     });
 
@@ -226,7 +226,7 @@ WatchFace({
     hmUI.createWidget(hmUI.widget.IMG, {
       x: STYLES.SCREEN.centerX - 8,
       y: STYLES.SCREEN.centerY - 30,
-      src: 'time/colon_aod.png',
+      src: 'colon_aod.png',
       show_level: hmUI.show_level.ONAL_AOD,
     });
 

@@ -167,7 +167,9 @@ Cons: Limited customization, no advanced features
 - [x] Install Zeus CLI globally (v1.8.1)
 - [x] Clone reference repository → `reference-watchfaces/`
 - [x] Create first watchface project → `watchfaces/active-max-minimal/`
-- [ ] Set up Zepp Simulator (v2.0.2 download initiated)
+- [x] Set up GitHub repository → `fabioc-aloha/amazfit-watchfaces`
+- [x] Apply CorreaX branding (Azure color palette)
+- [ ] Install Zepp Simulator (v2.0.2 download initiated)
 - [ ] Create Zepp developer account
 - [ ] Join Discord community
 
@@ -178,7 +180,8 @@ Cons: Limited customization, no advanced features
 - [ ] Understand watchface states (Normal, AOD, Editable)
 - [ ] Learn hmUI widget system for ZeppOS 4.2+
 - [x] Create first watchface targeting **Amazfit Active Max**
-- [ ] Create image assets (digits, icons)
+- [x] Create placeholder image assets (digits, icons, weekdays)
+- [x] Fix asset paths to match flat file structure
 - [ ] Test in simulator
 
 ### Phase 3: Design & Development

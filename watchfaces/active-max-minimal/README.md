@@ -77,16 +77,17 @@ active-max-minimal/
 │   ├── index.js        # Main watchface logic
 │   └── styles.js       # Constants and styles (CorreaX colors)
 └── assets/
-    └── 480x480/        # Assets for Active Max
-        ├── time_*.png  # Time digit images
-        ├── aod_*.png   # AOD digit images
-        ├── *.png       # Weekday and icon images
-        └── ...
+    └── 480x480/        # Assets for Active Max (flat structure)
+        ├── time_0.png - time_9.png    # Time digits
+        ├── aod_0.png - aod_9.png      # AOD digits (dimmer)
+        ├── colon.png, colon_aod.png   # Separators
+        ├── sun.png - sat.png          # Weekday images
+        └── *_icon.png                 # Icons (battery, heart, steps)
 ```
 
 ## Assets
 
-The watchface uses the following image assets:
+The watchface uses flat-named image assets in `assets/480x480/`:
 
 ### Time Digits
 
@@ -96,6 +97,7 @@ The watchface uses the following image assets:
 ### AOD Digits
 
 - `aod_0.png` to `aod_9.png` — Dimmer digits for always-on display
+- `colon_aod.png` — AOD colon separator
 
 ### Weekdays
 
