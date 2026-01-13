@@ -1,7 +1,7 @@
 {
   "configVersion": "v3",
   "app": {
-    "appId": 0,
+    "appId": 1000001,
     "appName": "Active Max Minimal",
     "appType": "watchface",
     "version": {
@@ -43,24 +43,6 @@
         }
       ],
       "designWidth": 480
-    },
-    "active-2-round": {
-      "module": {
-        "watchface": {
-          "path": "watchface/index",
-          "main": 1,
-          "editable": 1,
-          "lockscreen": 1,
-          "photoscreen": 0
-        }
-      },
-      "platforms": [
-        {
-          "name": "amazfit-active-2-round",
-          "deviceSource": 8913152
-        }
-      ],
-      "designWidth": 466
     }
   },
   "i18n": {

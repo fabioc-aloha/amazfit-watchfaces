@@ -66,6 +66,23 @@ zeus dev
 zeus build
 ```
 
+## Known Issues
+
+### PNG2TGA Conversion Error (WIP)
+
+The Zeus CLI build process may fail with an error like:
+
+```
+ENOENT: no such file or directory, lstat '...icon.png_origin'
+```
+
+**Status**: Under investigation. This appears to be related to the PNG2TGA conversion step in the Zeus CLI build pipeline. The PNG files are valid (confirmed via header inspection), but the build process expects an `_origin` intermediate file.
+
+**Workarounds being explored**:
+- Different build flags or configurations
+- Alternative asset formats
+- Direct simulator preview
+
 ## Project Structure
 
 ```text
